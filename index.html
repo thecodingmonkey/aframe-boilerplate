@@ -8,7 +8,23 @@
   </head>
   <body>
     <a-scene>
-      <a-sphere position="0 0 -10" radius="5" src="surface.png"></a-sphere>
+<!--       <a-assets>
+        <a-asset-item id="meteor-obj" src="./stl/meteor-west.obj"></a-asset-item>
+        <a-asset-item id="meteor-mtl" src="./stl/meteor-west.mtl"></a-asset-item>
+      </a-assets>
+ -->
+      <!-- Using the asset management system. -->
+      <!-- <a-obj-model src="#meteor-obj" mtl="#meteor-mtl"></a-obj-model> -->
+
+      <a-entity collada-model="url(/stl/meteor-1_10000.dae)"></a-entity>
+      <!-- <a-sphere position="0 0 -10" radius="5" src="surface.png"></a-sphere> -->
+      <a-sky color="black"></a-sky>
+
+      <a-light type="point" position="0 20 0" color="white" intensity="0.5"></a-light>
+
+      <a-entity position="0 10 0">
+        <a-camera look-controls-enabled wasd-controls-enabled></a-camera>
+      </a-entity>
 
     </a-scene>
   </body>
